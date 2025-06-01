@@ -22,8 +22,6 @@ def analyser_et_sauvegarder_donnees(chemin_client, chemin_produit, chemin_vente,
         .getOrCreate()
 
     # --- Schémas ---
-    # S'assurer que les noms des colonnes dans le schéma correspondent exactement
-    # aux en-têtes des fichiers CSV après le renommage implicite par `header=True`.
     schema_client = StructType([
         StructField("N_Client", IntegerType(), True),
         StructField("Nom_Client", StringType(), True),
